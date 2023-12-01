@@ -1,0 +1,18 @@
+[package]
+name = "railway-heatmap"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fast-heatmap = "0.1.0"
+geo = { version = "0.27.0" }
+image = "0.24.7"
+rayon = "1.8.0"
+
+
+[profile.release]
+codegen-units = 1
+opt-level = 3
+lto = "fat"
